@@ -19,19 +19,31 @@ export default class Logger {
     });
   }
 
-  debug(message: string, context: any) {
-    this.logger.debug(message, context);
+  private log(
+    logFunction: (message: string, context?: any) => void,
+    message: string,
+    context: any,
+  ) {
+    if (context) {
+      logFunction(message, context);
+    } else {
+      logFunction(message);
+    }
   }
 
-  info(message: string, context: any) {
-    this.logger.info(message, context);
+  debug(message: string, context?: any) {
+    this.log(this.logger.debug, message, context);
   }
 
-  warn(message: string, context: any) {
-    this.logger.warn(message, context);
+  info(message: string, context?: any) {
+    this.log(this.logger.info, message, context);
   }
 
-  error(message: string, context: any) {
-    this.logger.error(message, context);
+  warn(message: string, context?: any) {
+    this.log(this.logger.warn, message, context);
+  }
+
+  error(message: string, context?: any) {
+    this.log(this.logger.error, message, context);
   }
 }
