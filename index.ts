@@ -22,33 +22,33 @@ export default class Logger {
 
   debug(message: string, context?: any) {
     if (context) {
-      this.logger.debug({ message, context });
+      this.logger.debug(message, context);
     } else {
-      this.logger.debug({ message });
+      this.logger.debug(message);
     }
   }
 
   info(message: string, context?: any) {
     if (context) {
-      this.logger.info({ message, context });
+      this.logger.info(message, context);
     } else {
-      this.logger.info({ message });
+      this.logger.info(message);
     }
   }
 
   warn(message: string, context?: any) {
     if (context) {
-      this.logger.warn({ message, context });
+      this.logger.warn(message, context);
     } else {
-      this.logger.warn({ message });
+      this.logger.warn(message);
     }
   }
 
   error(message: string, context?: any) {
     if (context) {
-      this.logger.error({ message, context });
+      this.logger.error(message, context);
     } else {
-      this.logger.error({ message });
+      this.logger.error(message);
     }
   }
 }
