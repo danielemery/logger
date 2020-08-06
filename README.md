@@ -8,7 +8,7 @@ Currently using bunyan.
 
 ## Usage
 
-Install with `npm i -D @danielemeryau/logger`
+Install with `npm i -S @danielemeryau/logger`
 
 ```js
 import Logger from '@danielremery/logger';
