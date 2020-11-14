@@ -11,12 +11,15 @@ Currently using bunyan.
 Install with `npm i -S @danielemeryau/logger`
 
 ```js
-import { Logger } from '@danielremery/logger';
+import { BunyanLogger } from '@danielremery/logger';
 
-const logger = new Logger('My Application');
+const logger = new BunyanLogger('My Application');
+const routerLogger = logger.child('Router');
 
-logger.info('Some text message', {
+logger.info('Some application message', {
   context1: 'some context',
   context2: 'some other context',
 });
+
+routerLogger.error('A routing error has occurred');
 ```

@@ -6,10 +6,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run Unit Tests
+          name: Run Build
           command: |
             npm ci
             npm run build
+      - run:
+          name: Run Tests
+          command: |
+            npm t
       - persist_to_workspace:
           root: .
           paths:
