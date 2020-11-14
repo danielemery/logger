@@ -11,9 +11,9 @@ Currently using bunyan.
 Install with `npm i -S @danielemeryau/logger`
 
 ```js
-import Logger from '@danielremery/logger';
+import { Logger } from '@danielremery/logger';
 
-const logger = new Logger('My app name');
+const logger = new Logger('My Application');
 
 logger.info('Some text message', {
   context1: 'some context',
