@@ -3,7 +3,14 @@ import bunyan from 'bunyan';
 type LevelType = 'debug' | 'info' | 'warn' | 'error';
 const levels = ['debug', 'info', 'warn', 'error'];
 
-export default class Logger {
+export interface ILogger {
+  debug(message: string, context?: any): void;
+  info(message: string, context?: any): void;
+  warn(message: string, context?: any): void;
+  error(message: string, context?: any): void;
+}
+
+export class Logger implements ILogger {
   private logger: bunyan;
 
   constructor(name: string, minLogLevel?: LevelType) {
