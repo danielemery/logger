@@ -1,6 +1,6 @@
 {
   "name": "@danielemeryau/logger",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Logger for use with my personal projects.",
   "main": "dist/index.js",
   "scripts": {
