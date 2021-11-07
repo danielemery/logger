@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:16
     steps:
       - checkout
       - run:
@@ -23,7 +23,7 @@ jobs:
 
   publish-beta:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:16
     steps:
       - attach_workspace:
           at: .
@@ -38,7 +38,7 @@ jobs:
             npm publish --access public --tag beta
   publish:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:16
     steps:
       - attach_workspace:
           at: .
